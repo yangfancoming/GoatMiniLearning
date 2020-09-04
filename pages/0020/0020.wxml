@@ -11,6 +11,9 @@
         bindtouchmove  按住移动事件
     2. 传递的参数
         evt 事件本身
+         id  dataset  touches
+
+    3. 事件对应实现函数
 
 -->
 
@@ -24,3 +27,12 @@
 <!-- 通过给组件加id属性，通过evt事件传递到逻辑层  获取currentTarget对象来区分用户的点击 -->
 <button id="one" bindtap="_ButtonTap2"> button 事件3 </button>
 <button id="two" bindtap="_ButtonTap2"> button 事件4 </button>
+
+
+<button id="two" bind:tap="_bindTap"> 触摸事件 </button>
+<button id="two" bind:longpress="_longpress">  长按事件 </button>
+<button id="two" bind:touchstart="_touchstart" bind:touchmove="_touchmove" bind:touchend="_touchend" bind:touchcancel="_touchcancel" > _touchstart </button>
+
+
+
+

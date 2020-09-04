@@ -13,6 +13,27 @@ Page({
         console.log(evt);
         console.log("点击了Button组件" + evt.currentTarget.id);
     },
+
+    _bindTap:()=>{
+        console.log("_bindTap");
+    },
+    _longpress:()=>{
+        console.log("_longpress");
+    },
+    _touchstart:()=>{
+        console.log("_touchstart");
+    },
+    _touchmove:()=>{
+        console.log("_touchmove");
+    },
+    _touchend:()=>{
+        console.log("_touchend");
+    },
+    _touchcancel:()=>{
+        console.log("_touchcancel");
+    },
+
+
     /**
      * 页面的初始数据
      */
@@ -31,7 +52,13 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+        // 通过定时器弹窗  模拟 bind:touchcancel="_touchcancel"  打断事件
+        setTimeout(()=>{
+            wx.showModal({
+                title: 'cancelColor',
+                content:'gg',
+            })
+        },3000)
     },
 
     /**
