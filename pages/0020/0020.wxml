@@ -1,0 +1,26 @@
+<!--pages/0020/0020.wxml-->
+
+
+
+<!--
+事件就是 从视图层(wxml)到逻辑层(js)的通讯
+通讯的两个要素：
+    1.什么类型的事件
+        bindtap  触碰事件
+        bindlongtap 长按事件
+        bindtouchmove  按住移动事件
+    2. 传递的参数
+        evt 事件本身
+
+-->
+
+
+<text bindtap="_TextTap"> text 事件 </text>
+
+<!-- 这种情况下  逻辑层函数无法区分 用户点击的是哪个按钮-->
+<button bindtap="_ButtonTap"> button 事件1 </button>
+<button bindtap="_ButtonTap"> button 事件2 </button>
+
+<!-- 通过给组件加id属性，通过evt事件传递到逻辑层  获取currentTarget对象来区分用户的点击 -->
+<button id="one" bindtap="_ButtonTap2"> button 事件3 </button>
+<button id="two" bindtap="_ButtonTap2"> button 事件4 </button>
