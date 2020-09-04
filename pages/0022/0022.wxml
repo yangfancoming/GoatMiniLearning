@@ -1,0 +1,31 @@
+<!--pages/0022/0022.wxml-->
+<text>pages/0022/0022.wxml</text>
+
+
+<!--
+事件捕获 (从外往内)
+    当用户点击three产生事件时， 机制是从大到小依次传递  例如：
+     最先处理事件的是one，然后传递给 two，最终传递给 three 来处理
+
+
+
+
+事件冒泡 (从内往外)
+    当three处理完该事件后，再依次传递给 two，one 来处理。  two和one可以选择处理也可以选择不处理
+
+-->
+
+
+<view class="one" bindtap="_test1">
+one
+
+    <view class="two" bindtap="_test2">
+    two
+
+        <view class="three" bindtap="_test3">
+        three
+        </view>
+
+    </view>
+
+</view>
