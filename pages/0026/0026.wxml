@@ -1,0 +1,31 @@
+
+
+<view > 男 </view>
+<view > 女 </view>
+
+<view > {{tool.testFunc()}} </view>
+
+
+<!-- wxs标签使用步骤：
+1. 定义 wxs标签及module属性
+2. 内部编写实现函数
+3. module.exports 定义别名导出
+4. 再其他组件中通过 {{模块名.函数名()}}的方式使用
+
+-->
+
+<wxs module="tool">
+
+    function test(){
+        console.log('ok');
+        return 'xxx123';
+
+    }
+
+    module.exports = {
+        testFunc:test
+    }
+</wxs>
+
+
+

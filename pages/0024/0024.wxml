@@ -5,11 +5,15 @@
 
 <!-- name 属性是定义 -->
 <template name="goat">
-    <view> 测试一 </view>
-    <view> 测试二 </view>
+    <view> {{fuck}} </view>
+    <view> {{gaga}} </view>
     <view> 测试三 </view>
 </template>
 
 
+
 <!-- is 属性是使用 -->
 <template is="goat"></template>
+
+<!--模板传值 -->
+<template is="goat" data="{{fuck: 'test1',gaga: 'test2'}}"></template>
