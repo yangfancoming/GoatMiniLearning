@@ -11,7 +11,16 @@ Page({
 
     _ButtonTap2: (evt)=> {
         console.log(evt);
-        console.log("点击了Button组件" + evt.currentTarget.id);
+
+        console.log("事件类型" + evt.type); // tap  longpress
+        console.log("事件类型" + evt.touches); // 多指操作
+        console.log("事件类型" + evt.changedTouches); //  单指边多指，多指变单指
+
+        console.log("冒泡初始传递的组件对象的组件id" + evt.target); // 冒泡初始传递的组件对象
+        console.log("触发事件的组件id" + evt.currentTarget); // 传递到的当前组件对象
+        console.log("currentTarget.id" + evt.currentTarget.id);
+        console.log("currentTarget.dataset" + evt.currentTarget.dataset); //  组件附带的dataset
+
     },
 
     _bindTap:()=>{
