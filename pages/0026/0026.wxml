@@ -4,6 +4,7 @@
 <view > 女 </view>
 
 <view > {{tool.testFunc()}} </view>
+<view > {{tool2.sumFunc(6,8)}} </view>
 
 
 <!-- wxs标签使用步骤：
@@ -14,11 +15,13 @@
 
 -->
 
+
+<!--第一种使用方式-->
 <wxs module="tool">
 
     function test(){
         console.log('ok');
-        return 'xxx123';
+        return 'xxx222';
 
     }
 
@@ -28,4 +31,6 @@
 </wxs>
 
 
-
+<!--第二种使用方式-->
+<!-- sos 注意这里的标签必须要闭合 否则效果又没有报错提示 -->
+<wxs module="tool2" src="tool2.wxs"/>
